@@ -1,0 +1,139 @@
+.home-background {
+  display: flex;
+  height: 100vh;
+  flex-direction: column; /* Alinha os filhos verticalmente */
+}
+
+/*Primeira Parte*/
+
+.home-cima {
+  display: flex;
+  max-height: 600px;
+  min-height: 500px;
+  background: linear-gradient(90deg, #4831d4 65%, #ccf381 50%);
+}
+
+.home-titulo {
+  font-size: 60px;
+  margin-top: 100px; /* Remove a margem para alinhamento mais preciso */
+  margin-left: 90px;
+  padding: 10px;
+  color: #ccf381;
+  text-align: left;
+}
+
+.home-subtitulo {
+  color: white;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.home-perfil {
+  background: url("/public/img/perfil.png") no-repeat center center; /* Define a imagem de fundo */
+  background-size: cover; /* Ajusta o tamanho da imagem */
+  width: 300px; /* Ajuste conforme necessário */
+  height: 300px; /* Ajuste conforme necessário */
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.home-chamada-fundo {
+  position: absolute; /* Permite o posicionamento absoluto dentro do home-cima */
+  bottom: 100px; /* Distância do fundo do container */
+  left: 35%;
+  transform: translateX(-50%); /* Ajusta o alinhamento centralizado */
+  display: flex;
+  gap: 35px; /* Espaçamento entre as chamadas */
+}
+
+.home-chamada1,
+.home-chamada2 {
+  width: 300px; /* Ajusta a largura para preencher o espaço */
+}
+
+.chamada-p {
+  color: #ccf381;
+  font-size: 15px;
+}
+
+.chamada-h3 {
+  color: white;
+  font-size: 16px;
+}
+/*Segunda Parte*/
+.home-design-dev-fundo {
+  display: flex;
+  min-height: 850px;
+  width: 100%;
+  background-image: url("/public/img/dev-design.png");
+  background-repeat: repeat-y;
+  background-size: contain;
+  flex-direction: column;
+}
+
+.home-design {
+  margin: 100px;
+  width: 600px;
+  font-size: 30px;
+  padding: 10px;
+  color: black;
+}
+
+.home-dev {
+  width: 600px;
+  font-size: 30px;
+  padding: 10px;
+  color: black;
+  text-align: right;
+  margin-left: 40%;
+}
+
+.home-dd-texto {
+  color: #22053beb;
+}
+
+.home-dd-titulo {
+  color: #4831d4;
+}
+
+/*Terceira Parte*/
+.home-formacao {
+  display: flex;
+  min-height: 900px;
+  width: 100%;
+  background: linear-gradient(90deg, #4831d4 100%, #ffffff 50%);
+  margin: 0;
+  padding: 0;
+}
+
+.home-container-formacao {
+  width: 50%; /* Ajustado para ocupar metade do contêiner pai */
+  padding: 20px;
+}
+
+.home-formacao-titulo {
+  color: #ccf381;
+  font-size: 50px;
+  padding: 30px;
+}
+
+.home-formacao-titulo-espaco {
+  padding: 40px;
+}
+
+.home-formacao-texto {
+  color: white;
+  font-size: 25px;
+  margin-right: 30px;
+  padding-right: 80px;
+  margin-bottom: 15px;
+}
+
+.home-img-formacao {
+  width: 600px; /* Ajustado para ocupar metade do contêiner pai */
+  background-image: url("/public/img/estudos.png");
+  background-size: cover; /* Ajustado para cobrir todo o contêiner */
+  background-repeat: no-repeat;
+  background-position: center; /* Centraliza a imagem no contêiner */
+}
