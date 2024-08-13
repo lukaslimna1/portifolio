@@ -8,64 +8,73 @@
 
 .home-cima {
   display: flex;
-  max-height: 600px;
-  min-height: 500px;
-  background: linear-gradient(90deg, #4831d4 65%, #ccf381 50%);
+  width: inherit;
+  max-height: 100vh;
+  min-height: 80vh;
+  background: linear-gradient(90deg, #4831d4 70%, #ccf381 50%);
 }
 
 .home-titulo {
-  font-size: 60px;
-  margin-top: 100px; /* Remove a margem para alinhamento mais preciso */
-  margin-left: 90px;
-  padding: 10px;
+  font-weight: 900;
+  font-size: 4em;
+  margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
+  margin-left: 1em;
   color: #ccf381;
   text-align: left;
+  text-shadow: 0.3em 0.1em 0.1em black;
 }
 
 .home-subtitulo {
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
+  margin-left: 3em;
   color: white;
-  font-size: 20px;
-  text-align: left;
-  margin-top: 10px;
 }
 
 .home-perfil {
   background: url("/public/img/perfil.png") no-repeat center center; /* Define a imagem de fundo */
   background-size: cover; /* Ajusta o tamanho da imagem */
-  width: 300px; /* Ajuste conforme necessário */
-  height: 300px; /* Ajuste conforme necessário */
-  margin-left: 100px;
-  margin-top: 50px;
+  width: 25vw; /* Ajuste conforme necessário */
+  height: 50vh; /* Ajuste conforme necessário */
+  margin-left: 7em;
+  margin-top: 2em;
 }
 
 .home-chamada-fundo {
   position: absolute; /* Permite o posicionamento absoluto dentro do home-cima */
-  bottom: 100px; /* Distância do fundo do container */
-  left: 35%;
+  bottom: 10em; /* Distância do fundo do container */
+  left: 30em;
   transform: translateX(-50%); /* Ajusta o alinhamento centralizado */
   display: flex;
-  gap: 35px; /* Espaçamento entre as chamadas */
+  gap: 10em; /* Espaçamento entre as chamadas */
 }
 
-.home-chamada1,
+.home-chamada1 {
+  width: 20vw; /* Ajusta a largura para preencher o espaço */
+}
 .home-chamada2 {
-  width: 300px; /* Ajusta a largura para preencher o espaço */
+  width: 25vw;
 }
 
 .chamada-p {
-  color: #ccf381;
-  font-size: 15px;
+  color: #fff;
+  font-size: 1em;
 }
 
 .chamada-h3 {
-  color: white;
-  font-size: 16px;
+  text-shadow: 0.3em 0.1em 0.1em black;
+  margin-bottom: 1em;
+  font-weight: 900;
+  color: #ccf381;
+  font-size: 1.2em;
 }
+
 /*Segunda Parte*/
 .home-design-dev-fundo {
   display: flex;
-  min-height: 850px;
-  width: 100%;
+  min-height: 140vh;
+  width: inherit;
   background-image: url("/public/img/dev-design.png");
   background-repeat: repeat-y;
   background-size: contain;
@@ -73,20 +82,21 @@
 }
 
 .home-design {
-  margin: 100px;
-  width: 600px;
-  font-size: 30px;
-  padding: 10px;
+  width: 60rem;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 2em;
   color: black;
 }
 
 .home-dev {
-  width: 600px;
-  font-size: 30px;
-  padding: 10px;
+  width: 60rem;
+  font-size: 2em;
+  font-weight: 500;
+  margin: 2em;
   color: black;
   text-align: right;
-  margin-left: 40%;
+  margin-left: 14em;
 }
 
 .home-dd-texto {
@@ -95,13 +105,15 @@
 
 .home-dd-titulo {
   color: #4831d4;
+  font-size: 3em;
+  font-weight: 900;
+  text-shadow: 0.1em 0.1em 0.3em #22053beb;
 }
 
 /*Terceira Parte*/
 .home-formacao {
   display: flex;
-  min-height: 900px;
-  width: 100%;
+  min-height: 210vh;
   background: linear-gradient(90deg, #4831d4 100%, #ffffff 50%);
   margin: 0;
   padding: 0;
@@ -109,31 +121,45 @@
 
 .home-container-formacao {
   width: 50%; /* Ajustado para ocupar metade do contêiner pai */
-  padding: 20px;
+  padding: 2em;
 }
 
 .home-formacao-titulo {
   color: #ccf381;
-  font-size: 50px;
-  padding: 30px;
-}
-
-.home-formacao-titulo-espaco {
-  padding: 40px;
+  font-size: 4em;
+  font-weight: 900;
+  padding: 0.4em;
+  text-shadow: 0.1em 0.1em 0.5em black;
 }
 
 .home-formacao-texto {
   color: white;
-  font-size: 25px;
-  margin-right: 30px;
-  padding-right: 80px;
-  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1.5em;
+  margin-right: 0.5em;
+  padding-right: 6em;
+  margin-bottom: 1em;
 }
 
 .home-img-formacao {
-  width: 600px; /* Ajustado para ocupar metade do contêiner pai */
-  background-image: url("/public/img/estudos.png");
-  background-size: cover; /* Ajustado para cobrir todo o contêiner */
+  height: 90em;
+  width: 50em; /* Ajustado para ocupar metade do contêiner pai */
+  background-image: url("/public/img/estudo.png");
+  background-size: contain; /* Ajustado para cobrir todo o contêiner */
   background-repeat: no-repeat;
   background-position: center; /* Centraliza a imagem no contêiner */
+}
+
+.home-links-container {
+  display: flex;
+  min-height: 50em;
+  background-color: #ccf381;
+}
+
+.home-links-esquerdo,
+.home-links-direito {
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
