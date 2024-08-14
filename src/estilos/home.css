@@ -107,7 +107,6 @@
   color: #4831d4;
   font-size: 3em;
   font-weight: 900;
-  text-shadow: 0.1em 0.1em 0.3em #22053beb;
 }
 
 /*Terceira Parte*/
@@ -150,16 +149,71 @@
   background-position: center; /* Centraliza a imagem no contêiner */
 }
 
+
+/*Final*/
+
+
 .home-links-container {
   display: flex;
   min-height: 50em;
-  background-color: #ccf381;
 }
 
 .home-links-esquerdo,
 .home-links-direito {
   flex: 1;
+  margin: 5em;
   justify-content: center;
-  align-items: center;
+}
+
+.home-links-titulo{
+  width: 10em;
+  font-size: 3em;
+  font-weight: 900;
+  color: #4831d4;
+}
+
+.home-links-paragrafo {
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 1em;
+}
+
+.home-link-btn {
+ 
+  margin: 2em 4em 0; /* Alinha ao centro horizontalmente */
+  width: 10em;
+  height: 2em;
+  border-radius: 0.3em;
   text-align: center;
+  font-size: 2em;
+  font-weight: 600;
+  display: block; /* Garante que o botão se comporte como um bloco */
+  background-color: #4831d4;
+  color: #ccf381;
+}
+.home-links-wave {
+  margin-top: 5em; /* Espaço superior ajustado conforme necessário */
+  width: 0.5em; /* Largura aumentada para uma visualização mais clara */
+  height: 35em; /* Altura aumentada para uma visualização mais clara */
+  background: linear-gradient(45deg, #ccf381, #4831d4, #ff6b6b, #ffb347);
+  background-size: 400% 400%; /* Aumenta o tamanho do fundo para uma animação mais suave */
+  animation: gradient-animation 7s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
