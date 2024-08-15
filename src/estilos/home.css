@@ -1,6 +1,7 @@
 .home-background {
   display: flex;
   height: 100vh;
+
   flex-direction: column; /* Alinha os filhos verticalmente */
 }
 
@@ -11,39 +12,40 @@
   width: inherit;
   max-height: 100vh;
   min-height: 80vh;
-  background: linear-gradient(90deg, #4831d4 70%, #ccf381 50%);
+  background: linear-gradient(90deg, #4831d4 70%, #27e8b1 50%);
+  overflow: hidden;
 }
 
 .home-titulo {
   font-weight: 900;
-  font-size: 4em;
+  font-size: 3.8em;
   margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
   margin-left: 1em;
-  color: #ccf381;
+  color: #27e8b1;
   text-align: left;
-  text-shadow: 0.3em 0.1em 0.1em black;
+  text-shadow: 0.3em 0.1em 0.3em black;
 }
 
 .home-subtitulo {
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1em;
   margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
-  margin-left: 3em;
+  margin-left: 4em;
   color: white;
 }
 
 .home-perfil {
   background: url("/public/img/perfil.png") no-repeat center center; /* Define a imagem de fundo */
   background-size: cover; /* Ajusta o tamanho da imagem */
-  width: 25vw; /* Ajuste conforme necessário */
-  height: 50vh; /* Ajuste conforme necessário */
+  width: 20vw; /* Ajuste conforme necessário */
+  height: 40vh; /* Ajuste conforme necessário */
   margin-left: 7em;
   margin-top: 2em;
 }
 
 .home-chamada-fundo {
   position: absolute; /* Permite o posicionamento absoluto dentro do home-cima */
-  bottom: 10em; /* Distância do fundo do container */
+  bottom: 8em; /* Distância do fundo do container */
   left: 30em;
   transform: translateX(-50%); /* Ajusta o alinhamento centralizado */
   display: flex;
@@ -63,17 +65,17 @@
 }
 
 .chamada-h3 {
-  text-shadow: 0.3em 0.1em 0.1em black;
+  text-shadow: 0.1em 0.1em 0.1em black;
   margin-bottom: 1em;
   font-weight: 900;
-  color: #ccf381;
+  color: #27e8b1;
   font-size: 1.2em;
 }
 
 /*Segunda Parte*/
 .home-design-dev-fundo {
   display: flex;
-  min-height: 140vh;
+  min-height: 120vh;
   width: inherit;
   background-image: url("/public/img/dev-design.png");
   background-repeat: repeat-y;
@@ -82,25 +84,21 @@
 }
 
 .home-design {
-  width: 60rem;
-  font-size: 2em;
-  font-weight: 500;
+  width: 30rem;
+
   margin: 2em;
-  color: black;
 }
 
 .home-dev {
-  width: 60rem;
-  font-size: 2em;
-  font-weight: 500;
-  margin: 2em;
-  color: black;
-  text-align: right;
-  margin-left: 14em;
+  width: 30rem;
+  margin-top: 10em;
+  margin-left: 40em;
 }
 
 .home-dd-texto {
-  color: #22053beb;
+  color: #19114b;
+  font-size: 1em;
+  font-weight: 900;
 }
 
 .home-dd-titulo {
@@ -112,7 +110,7 @@
 /*Terceira Parte*/
 .home-formacao {
   display: flex;
-  min-height: 210vh;
+  min-height: 300vh;
   background: linear-gradient(90deg, #4831d4 100%, #ffffff 50%);
   margin: 0;
   padding: 0;
@@ -124,7 +122,7 @@
 }
 
 .home-formacao-titulo {
-  color: #ccf381;
+  color: #27e8b1;
   font-size: 4em;
   font-weight: 900;
   padding: 0.4em;
@@ -149,23 +147,22 @@
   background-position: center; /* Centraliza a imagem no contêiner */
 }
 
-
 /*Final*/
-
 
 .home-links-container {
   display: flex;
-  min-height: 50em;
+  min-height: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
 }
 
-.home-links-esquerdo,
 .home-links-direito {
   flex: 1;
-  margin: 5em;
-  justify-content: center;
+  padding: 2em;
 }
 
-.home-links-titulo{
+.home-links-titulo {
   width: 10em;
   font-size: 3em;
   font-weight: 900;
@@ -173,30 +170,63 @@
 }
 
 .home-links-paragrafo {
-  font-size: 2em;
+  font-size: 1.5em;
+  width: 20em;
   font-weight: 500;
   margin-top: 1em;
 }
 
+/* Botão */
 .home-link-btn {
- 
-  margin: 2em 4em 0; /* Alinha ao centro horizontalmente */
+  position: relative;
+  margin: 2em 4em;
   width: 10em;
   height: 2em;
   border-radius: 0.3em;
   text-align: center;
   font-size: 2em;
   font-weight: 600;
-  display: block; /* Garante que o botão se comporte como um bloco */
-  background-color: #4831d4;
-  color: #ccf381;
+  display: block;
+  background: linear-gradient(90deg, hwb(248 19% 17%), #27e8b1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.4s;
 }
+
+/* Efeito Gradiente em Movimento */
+.home-link-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background-color: #4831d4; /* Cor sólida */
+  transition: left 0.4s;
+  z-index: 0;
+}
+
+/* Efeito ao passar o mouse */
+.home-link-btn:hover::after {
+  left: 100%;
+}
+
+/* Ajuste do texto do botão para garantir que fique sobre o efeito gradiente */
+.home-link-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+/*Barra de Separação !*/
+
 .home-links-wave {
-  margin-top: 5em; /* Espaço superior ajustado conforme necessário */
-  width: 0.5em; /* Largura aumentada para uma visualização mais clara */
-  height: 35em; /* Altura aumentada para uma visualização mais clara */
-  background: linear-gradient(45deg, #ccf381, #4831d4, #ff6b6b, #ffb347);
-  background-size: 400% 400%; /* Aumenta o tamanho do fundo para uma animação mais suave */
+  margin-top: 4em; /* Espaço superior ajustado conforme necessário */
+  min-width: 0.3vw; /* Largura aumentada para uma visualização mais clara */
+  height: 90vh; /* Altura aumentada para uma visualização mais clara */
+  background: linear-gradient(45deg, #27e8b1, #4831d4, #27e8b1, #ac12e1);
+  background-size: 230% 200%; /* Aumenta o tamanho do fundo para uma animação mais suave */
   animation: gradient-animation 7s ease infinite;
 }
 

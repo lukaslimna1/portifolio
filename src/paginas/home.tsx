@@ -1,9 +1,11 @@
 import React from "react";
 import "../estilos/home.css";
+import Menu from "../componentes/menu";
 
 function Home() {
   return (
     <div className='home-background'>
+      <Menu />
       <div className='home-cima'>
         <div>
           <h1 className='home-titulo'>
@@ -86,19 +88,28 @@ function Home() {
       </div>
       <div className='home-links-container'>
         <div className='home-links-esquerdo'>
-          <h1 className="home-links-titulo">Veja o código em Ação !</h1>
-          <p className="home-links-paragrafo">"Desenvolvo o código que dá vida às minhas interfaces, garantindo uma
-experiência de usuário suave e eficiente."</p>
-          <button className="home-link-btn"> Veja Mais </button>
+          <h1 className='home-links-titulo'>Veja o código em Ação !</h1>
+          <p className='home-links-paragrafo'>
+            "Desenvolvo o código que dá vida às minhas interfaces, garantindo uma
+            experiência de usuário suave e eficiente."
+          </p>
+          <button className='home-link-btn'>
+            {" "}
+            <span>Veja Mais</span>{" "}
+          </button>
         </div>
-        <div className="home-links-wave"></div>
+        <div className='home-links-wave'></div>
         <div className='home-links-direito'>
-          <h1 className="home-links-titulo">Dê uma olhada nos meus Designs</h1>
-          <p className="home-links-paragrafo">"Crio interfaces e telas para aplicativos
-e soluções digitais, tornando cada projeto
- funcional e visualmente marcante."</p>
-          <button className="home-link-btn"> Veja Mais </button>
-          </div>
+          <h1 className='home-links-titulo'>Dê uma olhada nos meus Designs</h1>
+          <p className='home-links-paragrafo'>
+            "Crio interfaces e telas para aplicativos e soluções digitais, tornando cada
+            projeto funcional e visualmente marcante."
+          </p>
+          <button className='home-link-btn'>
+            {" "}
+            <span> Veja Mais</span>{" "}
+          </button>
+        </div>
       </div>
     </div>
   );
