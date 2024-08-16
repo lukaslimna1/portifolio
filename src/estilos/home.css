@@ -1,183 +1,224 @@
 .home-background {
   display: flex;
-  height: 100vh;
-
+  height: auto;
   flex-direction: column; /* Alinha os filhos verticalmente */
 }
 
-/*Primeira Parte*/
+/*-------------------------------------------PRIMEIRA PARTE----------------------------------------------------------------*/
 
 .home-cima {
   display: flex;
   width: inherit;
-  max-height: 100vh;
-  min-height: 80vh;
-  background: linear-gradient(90deg, #4831d4 70%, #27e8b1 50%);
+  max-height: auto;
+  min-height: 90vh;
+  background: linear-gradient(90deg, #4831d4 80%, #27e8b1 50%);
   overflow: hidden;
 }
 
-.home-titulo {
+/*Parte de cima do Topo*/
+.home-titulos {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-titulos-principal {
+  flex: 1;
+}
+
+.home-titulos-principalh1 {
   font-weight: 900;
-  font-size: 3.8em;
-  margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
+  font-size: 3.7em;
+  font-weight: 800;
+  margin-top: 0.9em; /* Remove a margem para alinhamento mais preciso */
   margin-left: 1em;
   color: #27e8b1;
   text-align: left;
   text-shadow: 0.3em 0.1em 0.3em black;
 }
 
-.home-subtitulo {
+.principal {
+  font-size: 5rem;
+}
+
+.home-titulos-principalp {
   font-weight: 500;
-  font-size: 1em;
+  font-size: 1.1em;
   margin-top: 1em; /* Remove a margem para alinhamento mais preciso */
   margin-left: 4em;
   color: white;
 }
+/*Parte de baixo do Topo*/
+.home-titulos-secundarios {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  margin: 1em 2em 0;
+}
 
+.home-titulos-FD,
+.home-titulos-HE {
+  flex: 1;
+  margin: 2em;
+}
+
+.home-titulo-auxh3 {
+  text-shadow: 0.1em 0.1em 0.1em black;
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: #27e8b1;
+  font-size: 0.9em;
+}
+.home-titulo-auxp {
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+/*Parte da Foto do Topo*/
+
+.home-foto {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5em;
+}
+/*Foto do perfil*/
 .home-perfil {
   background: url("/public/img/perfil.png") no-repeat center center; /* Define a imagem de fundo */
   background-size: cover; /* Ajusta o tamanho da imagem */
   width: 20vw; /* Ajuste conforme necessário */
   height: 40vh; /* Ajuste conforme necessário */
-  margin-left: 7em;
-  margin-top: 2em;
 }
+/*-------------------------------------------SEGUNDA PARTE----------------------------------------------------------------*/
 
-.home-chamada-fundo {
-  position: absolute; /* Permite o posicionamento absoluto dentro do home-cima */
-  bottom: 8em; /* Distância do fundo do container */
-  left: 30em;
-  transform: translateX(-50%); /* Ajusta o alinhamento centralizado */
-  display: flex;
-  gap: 10em; /* Espaçamento entre as chamadas */
-}
-
-.home-chamada1 {
-  width: 20vw; /* Ajusta a largura para preencher o espaço */
-}
-.home-chamada2 {
-  width: 25vw;
-}
-
-.chamada-p {
-  color: #fff;
-  font-size: 1em;
-}
-
-.chamada-h3 {
-  text-shadow: 0.1em 0.1em 0.1em black;
-  margin-bottom: 1em;
-  font-weight: 900;
-  color: #27e8b1;
-  font-size: 1.2em;
-}
-
-/*Segunda Parte*/
-.home-design-dev-fundo {
-  display: flex;
-  min-height: 120vh;
+.home-info-fundo {
+  min-height: auto;
   width: inherit;
   background-image: url("/public/img/dev-design.png");
   background-repeat: repeat-y;
   background-size: contain;
+  display: flex;
   flex-direction: column;
 }
 
-.home-design {
-  width: 30rem;
-
-  margin: 2em;
-}
-
-.home-dev {
-  width: 30rem;
-  margin-top: 10em;
-  margin-left: 40em;
-}
-
-.home-dd-texto {
-  color: #19114b;
-  font-size: 1em;
-  font-weight: 900;
-}
-
-.home-dd-titulo {
-  color: #4831d4;
-  font-size: 3em;
-  font-weight: 900;
-}
-
-/*Terceira Parte*/
-.home-formacao {
+.home-info {
+  flex: 1;
   display: flex;
-  min-height: 300vh;
-  background: linear-gradient(90deg, #4831d4 100%, #ffffff 50%);
+  width: 100%; /* Use 100% em vez de inherit */
+  height: 70vh;
   margin: 0;
   padding: 0;
 }
 
-.home-container-formacao {
-  width: 50%; /* Ajustado para ocupar metade do contêiner pai */
-  padding: 2em;
+.home-info1,
+.home-info2 {
+  flex: 1;
+  margin: 5em 3em 0 3em;
 }
 
-.home-formacao-titulo {
-  color: #27e8b1;
+.home-info2 {
+  text-align: right;
+}
+
+.home-infoh2 {
+  color: #4831d4;
   font-size: 4em;
   font-weight: 900;
-  padding: 0.4em;
-  text-shadow: 0.1em 0.1em 0.5em black;
 }
 
-.home-formacao-texto {
-  color: white;
-  font-weight: 500;
+.home-infop {
+  color: #030303;
   font-size: 1.5em;
-  margin-right: 0.5em;
-  padding-right: 6em;
+  font-weight: 500;
+}
+
+/*-------------------------------------------TERCEIRA PARTE----------------------------------------------------------------*/
+
+.home-formacao {
+  display: flex;
+  flex-direction: row;
+  min-height: auto;
+  background-color: #4831d4;
+}
+
+.home-formacao-texto,
+.home-formacao-imagem {
+  flex: 1;
+  margin: 0.2em;
+}
+
+.home-formacaoh1 {
+  color: #27e8b1;
+  text-align: center;
+  text-shadow: 0.3em 0.1em 0.3em black;
+  font-size: 4.6em;
+  font-weight: 900;
   margin-bottom: 1em;
 }
 
-.home-img-formacao {
-  height: 90em;
-  width: 50em; /* Ajustado para ocupar metade do contêiner pai */
+.home-formacaop {
+  color: white;
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+.home-formacao-imagem {
+  height: inherit;
   background-image: url("/public/img/estudo.png");
   background-size: contain; /* Ajustado para cobrir todo o contêiner */
   background-repeat: no-repeat;
   background-position: center; /* Centraliza a imagem no contêiner */
 }
 
-/*Final*/
+/*-------------------------------------------QUARTA PARTE----------------------------------------------------------------*/
 
-.home-links-container {
+.home-link {
   display: flex;
   min-height: auto;
-  align-items: center;
-  justify-content: center;
-  padding: 5em;
-}
-
-.home-links-direito {
-  flex: 1;
-  padding: 2em;
-}
-
-.home-links-titulo {
-  width: 10em;
-  font-size: 3em;
-  font-weight: 900;
-  color: #4831d4;
-}
-
-.home-links-paragrafo {
-  font-size: 1.5em;
-  width: 20em;
-  font-weight: 500;
   margin-top: 1em;
 }
+.home-link-esquerdo,
+.home-link-direito {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
-/* Botão */
+.home-link-textos {
+  flex: 1;
+  margin: 1em;
+}
+
+.home-linkh1 {
+  color: #4831d4;
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+.home-linkp {
+  color: black;
+  font-size: 1.5em;
+  font-weight: 500;
+  width: 50%;
+  margin-left: 3.5em;
+}
+
+/*------------------------------------------- COMEÇA OS BOTÕES ----------------------------------------------------------------*/
 .home-link-btn {
+  flex: 1;
+  margin: 1em;
+}
+
+.home-linkbtn {
   position: relative;
   margin: 2em 4em;
   width: 10em;
@@ -187,7 +228,7 @@
   font-size: 2em;
   font-weight: 600;
   display: block;
-  background: linear-gradient(90deg, hwb(248 19% 17%), #27e8b1);
+  background: linear-gradient(90deg, #d40759, #e3312d);
   color: white;
   border: none;
   cursor: pointer;
@@ -196,7 +237,7 @@
 }
 
 /* Efeito Gradiente em Movimento */
-.home-link-btn::after {
+.home-linkbtn::after {
   content: "";
   position: absolute;
   top: 0;
@@ -209,41 +250,21 @@
 }
 
 /* Efeito ao passar o mouse */
-.home-link-btn:hover::after {
+.home-linkbtn:hover::after {
   left: 100%;
 }
 
 /* Ajuste do texto do botão para garantir que fique sobre o efeito gradiente */
-.home-link-btn span {
+.home-linkbtn span {
   position: relative;
   z-index: 1;
 }
 
-/*Barra de Separação !*/
-
-.home-links-wave {
-  margin-top: 4em; /* Espaço superior ajustado conforme necessário */
-  min-width: 0.3vw; /* Largura aumentada para uma visualização mais clara */
-  height: 90vh; /* Altura aumentada para uma visualização mais clara */
-  background: linear-gradient(45deg, #27e8b1, #4831d4, #27e8b1, #ac12e1);
-  background-size: 230% 200%; /* Aumenta o tamanho do fundo para uma animação mais suave */
-  animation: gradient-animation 7s ease infinite;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 0%;
-  }
-  25% {
-    background-position: 100% 0%;
-  }
-  50% {
-    background-position: 100% 100%;
-  }
-  75% {
-    background-position: 0% 100%;
-  }
-  100% {
-    background-position: 0% 0%;
-  }
+/*-------------------------------------------COMEÇA A BARRA DE SEPARAÇÃO----------------------------------------------------------------*/
+.home-link-meio {
+  flex: 0.01;
+  margin-top: 2em;
+  min-width: 0.01vw;
+  height: 80vh;
+  background: linear-gradient(90deg, #d40759, #e3312d);
 }

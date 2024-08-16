@@ -1,0 +1,99 @@
+/* Estilos principais do rodapé */
+.rodape {
+  background-color: #4831d4; /* Cor de fundo vibrante */
+  color: white; /* Cor do texto */
+  padding: 2em; /* Espaçamento interno */
+  display: flex; /* Flexbox para layout horizontal */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  flex-wrap: wrap; /* Permite quebra de linha para melhor responsividade */
+}
+
+.rodape-logo {
+  flex: 1; /* Ocupa espaço flexível */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza a logo */
+  margin-right: 2em; /* Margem à direita */
+}
+
+.rodape-conteudo {
+  flex: 3; /* Ocupa mais espaço flexível */
+  display: flex; /* Flexbox para layout interno */
+  flex-direction: row; /* Alinha os itens horizontalmente */
+  justify-content: space-between; /* Distribui espaço entre os itens */
+  align-items: center; /* Alinha verticalmente */
+}
+
+.rodape-info,
+.rodape-contato {
+  flex: 1; /* Ocupa espaço flexível */
+  margin: 0 1em; /* Margem lateral */
+}
+
+.rodape-titulo {
+  font-size: 1.6em; /* Tamanho da fonte do título */
+  margin-bottom: 0.5em; /* Margem abaixo do título */
+  color: #27e8b1; /* Cor dos títulos */
+  font-weight: bold; /* Negrito no título */
+}
+
+.rodape-texto {
+  font-size: 1em; /* Tamanho da fonte do texto */
+  margin: 0.5em 0; /* Margem ao redor do texto */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+}
+
+.rodape-contato a {
+  display: flex; /* Flexbox para ícones e texto alinhados */
+  align-items: center; /* Alinha verticalmente ícone e texto */
+  color: #fff; /* Cor do texto dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 1em; /* Tamanho da fonte dos links */
+}
+
+.rodape-link {
+  color: #fff; /* Cor padrão dos links */
+  text-decoration: none; /* Remove sublinhado dos links */
+}
+
+.rodape-link:hover {
+  color: #27e8b1; /* Cor dos links ao passar o mouse */
+}
+
+.rodape-redes-sociais {
+  display: flex; /* Flexbox para alinhamento dos ícones */
+  align-items: center; /* Alinha verticalmente os ícones */
+  margin-left: 2em; /* Margem à esquerda */
+}
+
+.rodape-icon {
+  color: #fff; /* Cor padrão dos ícones */
+  font-size: 2em; /* Tamanho dos ícones principais */
+  margin: 0 0.8em; /* Margem horizontal entre ícones */
+  transition: color 0.3s, transform 0.3s; /* Transição suave na cor e transformação */
+}
+
+.rodape-icon-whats,
+.rodape-icon-email {
+  font-size: 1.5em; /* Tamanho menor para ícones do WhatsApp e Email */
+}
+
+.rodape-icon:hover,
+.rodape-icon-whats:hover,
+.rodape-icon-email:hover {
+  color: #e3312d; /* Cor dos ícones ao passar o mouse */
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+.rodape-rodape {
+  width: 100%; /* Largura total */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 1em; /* Margem acima do rodapé */
+  border-top: 1px solid #27e8b1; /* Linha superior para separação */
+  padding-top: 1em; /* Espaçamento interno superior */
+}
+
+.rodape-copyright {
+  font-size: 0.9em; /* Tamanho da fonte do texto de copyright */
+}

@@ -1,5 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rowdies:wght@300;400;700&display=swap");
 
+/* Fonte Facon */
+@font-face {
+  font-family: "Facon";
+  src: url("/src/fonts/Facon.otf") format("opentype");
+  font-weight: normal; /* Ajuste conforme necessário */
+  font-style: normal; /* Ajuste conforme necessário */
+}
+
+/* Fontes Infra Regular */
+@font-face {
+  font-family: "Infra";
+  src: url("/src/fonts/Infra-Regular.woff2") format("woff2"),
+    url("/src/fonts/Infra-Regular.woff") format("woff");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+/* Fontes Infra Medium */
+@font-face {
+  font-family: "Infra";
+  src: url("/src/fonts/Infra-Medium.woff2") format("woff2"),
+    url("/src/fonts/Infra-Medium.woff") format("woff");
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+/* Fontes Infra SemiBold */
+@font-face {
+  font-family: "Infra";
+  src: url("/src/fonts/Infra-SemiBold.ttf") format("truetype");
+  font-weight: 600; /* SemiBold */
+  font-style: normal;
+}
+
+/* Fontes Infra Bold */
+@font-face {
+  font-family: "Infra";
+  src: url("/src/fonts/Infra-Bold.woff2") format("woff2"),
+    url("/src/fonts/Infra-Bold.woff") format("woff");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+/* Fontes Infra ExtraBold */
+@font-face {
+  font-family: "Infra";
+  src: url("/src/fonts/Infra-ExtraBold.woff2") format("woff2"),
+    url("/src/fonts/Infra-ExtraBold.woff") format("woff");
+  font-weight: 800; /* ExtraBold */
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,5 +59,10 @@
 
 body,
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Infra", sans-serif;
+  font-weight: 400;
+}
+
+.principal {
+  font-family: "Facon", sans-serif;
 }
