@@ -5,8 +5,15 @@ import trabalhosData, { Trabalho } from "../data/trabalhosData";
 import Rodape from "../componentes/rodape";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faFigma, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faPalette, faCode, faDesktop } from "@fortawesome/free-solid-svg-icons";
+
+// Função para converter o título em slug
+const gerarSlug = (titulo: string) =>
+  titulo
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
 
 const Trabalhos: React.FC = () => {
   const location = useLocation();
@@ -86,7 +93,7 @@ const Trabalhos: React.FC = () => {
               className='trabalho-card'
             >
               <Link
-                to={`/trabalhos/${trabalho.id}`}
+                to={`/trabalhos/${gerarSlug(trabalho.titulo)}`} // Atualiza para usar slug
                 className='trabalho-link'
               >
                 {trabalho.imagens.length > 0 && (
@@ -121,6 +128,9 @@ const Trabalhos: React.FC = () => {
                           className='trabalho-link-icon'
                         >
                           {link.tipo === "github" && <FontAwesomeIcon icon={faGithub} />}
+                          {link.tipo === "linkedin" && (
+                            <FontAwesomeIcon icon={faLinkedin} />
+                          )}
                           {link.tipo === "figma" && <FontAwesomeIcon icon={faFigma} />}
                           {link.tipo === "website" && <FontAwesomeIcon icon={faGlobe} />}
                         </span>

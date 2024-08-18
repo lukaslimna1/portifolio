@@ -3,17 +3,23 @@ import { useParams, Link } from "react-router-dom";
 import trabalhosData, { Trabalho } from "../data/trabalhosData";
 import "../estilos/trabalhoDetalhes.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGlobe } from "@fortawesome/free-solid-svg-icons"; // Importando ícones
-import { faGithub, faFigma } from "@fortawesome/free-brands-svg-icons";
-import Slider from "react-slick"; // Importando o carrossel
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faFigma, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import Slider from "react-slick";
 import Rodape from "../componentes/rodape";
 
-const TrabalhoDetalhes: React.FC = () => {
-  const { id } = useParams<{ id: string }>();
-  const trabalho: Trabalho | undefined = trabalhosData.find(
-    (t) => t.id.toString() === id
-  );
+// Função para converter o título em slug
+const gerarSlug = (titulo: string) =>
+  titulo
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w-]/g, "");
 
+const TrabalhoDetalhes: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>();
+  const trabalho: Trabalho | undefined = trabalhosData.find(
+    (t) => gerarSlug(t.titulo) === slug
+  );
   if (!trabalho) {
     return <div>Trabalho não encontrado.</div>;
   }
@@ -25,8 +31,8 @@ const TrabalhoDetalhes: React.FC = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true, // Ativa o autoplay
-    autoplaySpeed: 2500, // Define a velocidade do autoplay (2.5 segundos)
+    autoplay: true,
+    autoplaySpeed: 2500,
   };
 
   return (
@@ -54,7 +60,6 @@ const TrabalhoDetalhes: React.FC = () => {
             {tag}
           </span>
         ))}
-        {/* Carrossel de imagens */}
         <Slider {...settings}>
           {trabalho.imagens.map((imagem, index) => (
             <img
@@ -65,7 +70,6 @@ const TrabalhoDetalhes: React.FC = () => {
             />
           ))}
         </Slider>
-        {/* Exibir descrição com quebras de linha */}
         <p className='trabalho-detalhes-descricao'>
           {trabalho.descricao.split("\n").map((line, index) => (
             <span key={index}>
@@ -79,7 +83,7 @@ const TrabalhoDetalhes: React.FC = () => {
           <h1>Veja mais em</h1>
           {trabalho.links.map(
             (link, index) =>
-              link.url && ( // Verifica se o link.url existe
+              link.url && (
                 <a
                   key={index}
                   href={link.url}
@@ -88,6 +92,7 @@ const TrabalhoDetalhes: React.FC = () => {
                   className='trabalho-detalhes-link'
                 >
                   {link.tipo === "github" && <FontAwesomeIcon icon={faGithub} />}
+                  {link.tipo === "linkedin" && <FontAwesomeIcon icon={faLinkedin} />}
                   {link.tipo === "figma" && <FontAwesomeIcon icon={faFigma} />}
                   {link.tipo === "website" && <FontAwesomeIcon icon={faGlobe} />}
                 </a>

@@ -10,6 +10,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const App: React.FC = () => {
+  // Função para gerar slug a partir do título
+  const gerarSlug = (titulo: string) =>
+    titulo
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "");
   return (
     <div className='content'>
       <Routes>
@@ -22,7 +28,7 @@ const App: React.FC = () => {
           element={<Trabalhos />}
         />
         <Route
-          path='/trabalhos/:id'
+          path='/trabalhos/:slug'
           element={<TrabalhoDetalhes />}
         />{" "}
         {/* Rota para detalhes */}

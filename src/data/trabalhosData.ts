@@ -88,21 +88,56 @@ Esperamos que, ao final do desenvolvimento, o Trampo Fácil contribua significat
     id: 3,
     categoria: ["Dev"],
     titulo: "Renata Ferreguti",
-    imagens: ["link-para-imagem-c1.jpg", "link-para-imagem-c2.jpg"],
-    tags: ["React", "Site"],
+    imagens: [
+      "/img/renata/rf2.png",
+      "/img/renata/rf1.png",
+      "/img/renata/rf3.png",
+      "/img/renata/rf4.png",
+      "/img/renata/rf5.png",
+      "/img/renata/rf6.png",
+      "/img/renata/rf7.png",
+    ],
+    tags: ["React", "Site", "Experimental"],
     descricao: `Desenvolvi um site experimental para Renata Ferreguti, candidata a vereadora de Bauru, com o objetivo de destacar sua trajetória política e seu papel como ativista dos direitos dos autistas. Renata é ex-presidente do Lions Club Autismo, política e palestrante, e o site busca evidenciar suas contribuições em várias áreas.
 
 Contribuições:
 Desenvolvimento da Página: Criação da estrutura e funcionalidades do site para apresentar a trajetória de Renata Ferreguti de maneira eficaz.
 Design dos Símbolos das Deficiências: Desenvolvimento de ícones personalizados para representar as diferentes deficiências, em harmonia com o tema do site.
 Integração Visual: Implementação das cores e fotos fornecidas pela equipe da campanha, garantindo alinhamento com a identidade visual da candidatura.`,
-    links: [
-      { url: "https://github.com/usuario/projeto-c", tipo: "github" },
-      // { url: "https://www.exemplo.com/projeto-c", tipo: "website" }, // Link opcional
-    ],
+    links: [{ url: "https://github.com/lukaslimna1/SiteRenata", tipo: "github" }],
   },
 
-  // Adicione mais projetos conforme necessário
+  {
+    id: 4,
+    categoria: ["Dev"],
+    titulo: "Launcher - PXWorld",
+    imagens: ["/img/px/px2.png", "/img/px/px1.png", "/img/px/px3.png"],
+    tags: [
+      "Eletron",
+      "Desenvolvimento de Software",
+      "Autenticação",
+      "Aplicações Desktop",
+    ],
+    descricao: `O Pixelmon World Launcher foi uma aplicação de desktop desenvolvida com Electron, projetada para a comunidade do jogo Pixelmon World. O lançador oferecia funcionalidades de autenticação e gerenciamento de contas, incluindo login com contas Microsoft e Pixelmon World, criação de novas contas, e recuperação de senha. Com um design responsivo e integração com redes sociais, visava proporcionar um acesso simplificado ao jogo e fortalecer a conexão com a comunidade. A aplicação foi projetada para ser compatível com Windows, macOS e Linux. No entanto, o projeto está atualmente descontinuado e não está mais em desenvolvimento ativo.`,
+    links: [{ url: "https://github.com/lukaslimna1/PXWLauncher", tipo: "github" }],
+  },
+  {
+    id: 5,
+    categoria: ["Design"],
+    titulo: "Capa para o Linkedin",
+    imagens: ["/img/linkedin/capalink.png", "/img/linkedin/capalink.png"],
+    tags: ["Design Gráfico", "LinkedIn", "Branding Pessoal"],
+    descricao: `Criei uma nova capa para minhas redes sociais, especialmente voltada para o LinkedIn, com o objetivo de aprimorar minha presença profissional online. A capa foi projetada para refletir minha experiência e habilidades de forma visualmente atraente e profissional.
+
+Detalhes do Design:
+Identidade Visual: A capa incorpora elementos gráficos que destacam minha experiência e áreas de atuação, alinhando-se com minha identidade profissional.
+Design Moderno: Utilizei um layout clean e moderno para garantir que a capa se destaque e passe uma imagem profissional e atualizada.
+Informações Relevantes: Incluí informações chave sobre minha formação, habilidades e áreas de interesse, proporcionando uma visão clara do meu perfil profissional.
+Objetivo:
+
+Melhorar a visibilidade e o impacto da minha presença online, criando uma imagem coesa e profissional que represente efetivamente minhas qualificações e experiências no LinkedIn.`,
+    links: [{ url: "https://github.com/lukaslimna1/SiteRenata", tipo: "linkedin" }],
+  },
 ];
 
 export default trabalhosData;
