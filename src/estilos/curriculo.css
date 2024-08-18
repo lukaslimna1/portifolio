@@ -1,179 +1,158 @@
-header {
-  background-color: #4831d4;
-  color: #27e8b1;
+.curriculo-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: #ffffff; /* Cor de fundo clara */
+  color: #333333; /* Texto escuro */
+  font-family: "Arial", sans-serif;
   padding: 20px;
-  text-align: center;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.Lucas {
-  color: #fff;
-  font-size: 3em;
-  font-weight: 800;
-}
+/*-------------------------------------------HEADER----------------------------------------------------------------*/
 
-nav {
-  background-color: #333;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-nav ul li {
-  margin: 0 15px;
-  display: inline-block;
-}
-
-nav ul li a {
-  display: block;
-  color: #27e8b1;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  background-color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #4831d4;
-  border-radius: 4px;
-}
-
-section {
-  padding: 20px;
-  background-color: #f0f4f8;
-  margin: 20px auto;
-  width: 80%;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-h2,
-h1 {
-  border-bottom: 2px solid #4831d4; /* Azul intenso */
-  padding-bottom: 10px;
-  color: #4831d4; /* Azul intenso */
-  transition: color 0.3s;
-}
-
-h2:hover {
-  color: #27e8b1; /* Verde intenso */
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
+.trabalhos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-table,
-th,
-td {
-  border: 1px solid #ddd;
-  padding: 12px;
-  text-align: left;
+.trabalhos-logo {
+  width: 20vw; /* Ajuste o tamanho da logo conforme necessário */
 }
 
-thead th {
-  background-color: #e2e2e2;
+.voltar-btn {
+  background-color: #27e8b1; /* Cor do botão */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #e2e2e2;
+.voltar-btn:hover {
+  background-color: #1f9f8c; /* Cor do botão ao passar o mouse */
 }
 
-ul {
+.curriculo-header {
+  text-align: center;
+}
+
+.curriculo-nome {
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #4831d4; /* Azul vibrante */
+  text-shadow: 0 0 10px rgba(72, 49, 212, 0.7);
+}
+
+.curriculo-curso {
+  font-size: 1.5em;
+  margin-top: 0.5em;
+}
+
+/*-------------------------------------------CONTATO----------------------------------------------------------------*/
+
+.curriculo-contato {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;
+  color: #4831d4; /* Azul vibrante */
+  transition: transform 0.3s;
+}
+
+.contato-item:hover {
+  transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.contato-item a {
+  color: #4831d4;
+  text-decoration: none;
+}
+
+/*-------------------------------------------SECTIONS----------------------------------------------------------------*/
+
+.curriculo-section {
+  background-color: #f9f9f9; /* Seção clara */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s; /* Efeito de transição */
+}
+
+.curriculo-section:hover {
+  transform: scale(1.02); /* Efeito de zoom ao passar o mouse */
+}
+
+.curriculo-section-title {
+  color: #4831d4; /* Azul vibrante */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #4831d4; /* Linha inferior azul */
+}
+
+/*-------------------------------------------HABILIDADES E COMPETÊNCIAS----------------------------------------------------------------*/
+
+.habilidade-categoria {
+  margin-bottom: 20px;
+}
+
+.habilidade-titulo {
+  color: #4831d4; /* Cor do título das habilidades */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.habilidade-lista {
   list-style-type: none;
   padding: 0;
 }
 
-ul li {
+.habilidade-lista li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
   margin: 5px 0;
+  background-color: #e6f7ff; /* Fundo das habilidades */
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.habilidade-lista li:hover {
+  background-color: #27e8b1; /* Efeito ao passar o mouse */
+  color: #000; /* Texto escuro ao passar o mouse */
+}
+
+/*-------------------------------------------LISTAS DE CURSOS E EXPERIÊNCIAS----------------------------------------------------------------*/
+
+.cursos-lista,
+.experiencia-lista {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cursos-lista li,
+.experiencia-lista li {
   padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 5px 0;
+  background-color: #e6f7ff; /* Fundo das listas */
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-.lista-cursos li {
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.lista-cursos li span {
-  display: block;
-  text-align: center;
-}
-
-.lista-cursos .titulo-curso {
-  font-weight: bold;
-}
-
-.lista-cursos .instituicao {
-  font-style: italic;
-  color: #777;
-}
-
-.lista-cursos .situacao {
-  color: #27e8b1;
-}
-
-/* Estilo para a tabela de habilidades */
-.grid-habilidades {
-  width: 100%;
-}
-
-.grid-habilidades td {
-  vertical-align: top;
-  padding: 20px;
-  transition: background-color 0.3s; /* Adiciona transição suave de cor ao passar o mouse */
-}
-
-/* Estilo para as células da tabela */
-.grid-habilidades ul li {
-  margin: 5px;
-  padding: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9; /* Fundo branco */
-  transition: background-color 0.3s; /* Adiciona transição suave de cor ao passar o mouse */
-}
-
-/* Cores de fundo diferentes para cada célula */
-.grid-habilidades td:nth-child(1) ul li:nth-child(odd) {
-  background-color: #e6f7ff; /* Cor de fundo azul claro para habilidades de design */
-}
-
-.grid-habilidades td:nth-child(2) ul li:nth-child(odd) {
-  background-color: #e0f2f1; /* Cor de fundo verde claro para habilidades de programação */
-}
-
-.grid-habilidades td:nth-child(3) ul li:nth-child(odd) {
-  background-color: #e6f7ff; /* Cor de fundo azul claro para outras habilidades */
-}
-
-/* Efeito ao passar o mouse sobre as células da tabela */
-.grid-habilidades td ul li:hover {
-  background-color: #27e8b1; /* Altera a cor de fundo ao passar o mouse para verde intenso */
-  color: #000; /* Altera a cor do texto para branco ao passar o mouse */
-}
-
-/* Estilo para o título "Outras Habilidades" */
-.grid-habilidades h3 {
-  border-bottom: 2px solid #4831d4; /* Linha inferior azul intenso */
-  padding-bottom: 10px;
-  color: #4831d4; /* Texto azul intenso */
-  transition: color 0.3s; /* Adiciona transição suave de cor ao passar o mouse */
-}
-
-/* Efeito ao passar o mouse sobre o título "Outras Habilidades" */
-.grid-habilidades h3:hover {
-  color: #4caf50; /* Altera a cor do texto para verde intenso ao passar o mouse */
+.cursos-lista li:hover,
+.experiencia-lista li:hover {
+  background-color: #27e8b1; /* Efeito ao passar o mouse */
+  color: #000; /* Texto escuro ao passar o mouse */
 }

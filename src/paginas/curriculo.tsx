@@ -1,12 +1,22 @@
 import React from "react";
-import Rodape from "../componentes/rodape";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhone,
+  faUsers,
+  faComments,
+  faCode,
+  faChartBar,
+  faPaintBrush,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import "../estilos/curriculo.css";
 
 function Curriculo() {
   return (
-    <div>
-      <div>
+    <div className='curriculo-container'>
+      <header className='curriculo-header'>
         <div className='trabalhos-header'>
           <img
             src='/img/logo2.png'
@@ -17,238 +27,131 @@ function Curriculo() {
             to='/'
             className='voltar-btn'
           >
-            <span>Voltar para Home</span>
+            Voltar para Home
           </Link>
         </div>
-        <header>
-          <h1 className='Lucas'>Lucas Lima</h1>
-          <p>Análise e Desenvolvimento de Sistemas</p>
-        </header>
+        <h1 className='curriculo-nome'>Lucas Lima</h1>
+        <p className='curriculo-curso'>Desenvolvedor Fullstack | Web Design</p>
+      </header>
 
-        <nav>
-          <ul>
-            <li>
-              <a href='#contato'>Contato</a>
-            </li>
-            <li>
-              <a href='#formacao'>Formação Acadêmica</a>
-            </li>
-            <li>
-              <a href='#experiencia'>Experiência</a>
-            </li>
-            <li>
-              <a href='#cursos'>Cursos Complementares</a>
-            </li>
-            <li>
-              <a href='#habilidades'>Habilidades</a>
-            </li>
-          </ul>
-        </nav>
-
-        <section id='contato'>
-          <h2>Contato</h2>
-          <p>
-            Email: <a href='mailto:lucasmslima1@gmail.com'>lucasmslima1@gmail.com</a>
-          </p>
-          <p>Telefone: (14) 98802-5296 (WhatsApp), (14) 99609-9191 (Recado)</p>
-          <p>Endereço: Rodolfina Dias Domingues 1-37, Bauru - SP, Brasil</p>
-          <p>Data de Nascimento: 24 de Maio de 1994</p>
-          <p>
-            Linktree:{" "}
-            <a href='https://linktr.ee/lucasmslima'>https://linktr.ee/lucasmslima</a>
-          </p>
-        </section>
-
-        <section id='formacao'>
-          <h2>Formação Acadêmica</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Curso</th>
-                <th>Instituição</th>
-                <th>Período</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tecnólogo - Análise e Desenvolvimento de Sistemas</td>
-                <td>Universidade Anhembi Morumbi - EAD</td>
-                <td>20/10/22 - Cursando</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id='experiencia'>
-          <h2>Experiência</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Cargo</th>
-                <th>Empresa</th>
-                <th>Período</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Operador de Telemarketing</td>
-                <td>Concilig</td>
-                <td>22/01/18 - 21/04/18</td>
-              </tr>
-              <tr>
-                <td>Operador de Caixa</td>
-                <td>Confiança Supermercados</td>
-                <td>03/10/18 - 03/06/20</td>
-              </tr>
-              <tr>
-                <td>Operador de Caixa</td>
-                <td>C&A Modas</td>
-                <td>03/12/19 - 04/02/22</td>
-              </tr>
-              <tr>
-                <td>Vendedor</td>
-                <td>Allied Brasil</td>
-                <td>02/10/22 - 13/12/22</td>
-              </tr>
-              <tr>
-                <td>Operador de Caixa</td>
-                <td>Bem Querer Donuts</td>
-                <td>29/03/22 - 09/03/23</td>
-              </tr>
-              <tr>
-                <td>Operador de Caixa</td>
-                <td>Oba Hortifute</td>
-                <td>20/03/23 - 22/01/24</td>
-              </tr>
-              <tr>
-                <td>Auxiliar de Logística</td>
-                <td>APPA (Correios)</td>
-                <td>25/01/24 - 16/02/24</td>
-              </tr>
-              <tr>
-                <td>Auxiliar de TI</td>
-                <td>Lojão do Pereirão</td>
-                <td>21/03/24 - 21/04/24</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section id='cursos'>
-          <h2>Cursos Complementares</h2>
-          <div>
-            <ul className='lista-cursos'>
-              <li>
-                <span className='titulo-curso'>Técnico em Desenvolvimento FullStack</span>
-                <span className='instituicao'>SENAC Bauru</span>
-                <span className='situacao'>(Cursando)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Web Designer</span>
-                <span className='instituicao'>SENAC Bauru</span>
-                <span className='situacao'>(Cursando)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>
-                  Santander Coders 2023.2 - Web Front-End
-                </span>
-                <span className='instituicao'>ADA Tech</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Power BI Completo</span>
-                <span className='instituicao'>Udemy</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Fundamentos Big Data 3.0</span>
-                <span className='instituicao'>Data Science Academy</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Get Connected</span>
-                <span className='instituicao'>Cisco Networking Academy</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Manutenção de Micro e Impressoras</span>
-                <span className='instituicao'>SENAI Bauru</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>
-                  Técnico em Assistente de Produção Gráfica
-                </span>
-                <span className='instituicao'>SENAC Bauru</span>
-                <span className='situacao'>(Concluído)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Santander Bootcamp 2024 - JAVA</span>
-                <span className='instituicao'>DIO</span>
-                <span className='situacao'>(Cursando)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Arquitetura de Redes</span>
-                <span className='instituicao'>Udemy</span>
-                <span className='situacao'>(Cursando)</span>
-              </li>
-              <li>
-                <span className='titulo-curso'>Desenvolvimento Mobile</span>
-                <span className='instituicao'>Udemy</span>
-                <span className='situacao'>(Cursando)</span>
-              </li>
-            </ul>
-          </div>
-        </section>
-
-        <section id='habilidades'>
-          <h2>Habilidades e Competências</h2>
-          <table className='grid-habilidades'>
-            <tr>
-              <td>
-                <h3>Design</h3>
-                <ul>
-                  <li>Adobe InDesign</li>
-                  <li>Adobe XD</li>
-                  <li>Photoshop</li>
-                  <li>Illustrator</li>
-                  <li>Figma</li>
-                </ul>
-              </td>
-              <td>
-                <h3>Programação</h3>
-                <ul>
-                  <li>Lógica de Programação</li>
-                  <li>MySQL</li>
-                  <li>Kotlin</li>
-                  <li>Java</li>
-                  <li>Node.js</li>
-                  <li>React.js</li>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                  <li>TypeScript</li>
-                </ul>
-              </td>
-              <td>
-                <h3>Outras Habilidades</h3>
-                <ul>
-                  <li>Português</li>
-                  <li>Trabalho em Equipe</li>
-                  <li>Comunicação Efetiva</li>
-                  <li>Atendimento ao Cliente</li>
-                  <li>Pacote Office</li>
-                  <li>Power BI</li>
-                  <li>VSCode</li>
-                  <li>GIT</li>
-                  <li>Android Studio</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </section>
+      <div className='curriculo-contato'>
+        <div className='contato-item'>
+          <FontAwesomeIcon icon={faEnvelope} />
+          <span>lucasmslima1@gmail.com</span>
+        </div>
+        <div className='contato-item'>
+          <FontAwesomeIcon icon={faPhone} />
+          <span>(14) 98802-5296</span>
+        </div>
+        <div className='contato-item'>
+          <FontAwesomeIcon icon={faLinkedin} />
+          <a href='https://linkedin.com/in/lucaslimna'>linkedin.com/in/lucaslimna</a>
+        </div>
+        <div className='contato-item'>
+          <FontAwesomeIcon icon={faGithub} />
+          <a href='https://github.com/lukaslimna1'>github.com/lukaslimna1</a>
+        </div>
       </div>
-      <Rodape />
+
+      <section className='curriculo-section formacao'>
+        <h2 className='curriculo-section-title'>Formação Acadêmica</h2>
+        <p>
+          Universidade Anhembi Morumbi - Cursando (finalização 12/2024) | Análise e
+          Desenvolvimento de Sistemas
+        </p>
+      </section>
+
+      <section className='curriculo-section experiencia'>
+        <h2 className='curriculo-section-title'>Experiências Profissionais</h2>
+        <ul className='experiencia-lista'>
+          <li>Concilig | Operador de Telemarketing | 22/01/2018 a 21/04/2018</li>
+          <li>Confiança Supermercados | Operador de Caixa | 03/10/2018 a 03/06/2020</li>
+          <li>C&A Modas | Operador de Caixa | 03/12/2019 a 04/02/2022</li>
+          <li>Allied Brasil | Vendedor | 02/10/2022 a 13/12/2022</li>
+          <li>Bem Querer Donuts | Operador de Caixa | 29/03/2022 a 09/03/2023</li>
+          <li>Oba Hortifruit | Operador de Caixa | 20/03/2023 a 22/01/2024</li>
+          <li>APPA (Correios) | Auxiliar de Logística | 25/01/2024 a 16/02/2024</li>
+          <li>Lojão do Pereirão | Auxiliar de T.I | 21/03/2024 a 21/04/2024</li>
+        </ul>
+      </section>
+
+      <section className='curriculo-section cursos'>
+        <h2 className='curriculo-section-title'>Cursos Complementares</h2>
+        <ul className='cursos-lista'>
+          <li>SENAC Bauru | Cuidador de Idosos | Concluído</li>
+          <li>Udemy | Power BI | Concluído</li>
+          <li>Udemy | Arquitetura de Redes | Concluído</li>
+          <li>SENAI Bauru | Manutenção de Computadores | Concluído</li>
+          <li>SENAC Bauru | Assistente de Produção Gráfica | Cursando</li>
+          <li>SENAC Bauru | Desenvolvimento Full Stack (React) | Cursando</li>
+          <li>SENAC Bauru | Desenvolvimento Web | Cursando</li>
+        </ul>
+      </section>
+
+      <section className='curriculo-section habilidades'>
+        <h2 className='curriculo-section-title'>Habilidades e Competências</h2>
+
+        <div className='habilidade-categoria'>
+          <h3 className='habilidade-titulo'>
+            <FontAwesomeIcon icon={faCode} /> Programação
+          </h3>
+          <ul className='habilidade-lista'>
+            <li>Lógica de Programação</li>
+            <li>HTML | CSS</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>Nest.js</li>
+            <li>MySQL</li>
+            <li>MongoDB</li>
+            <li>GIT</li>
+            <li>VSCode</li>
+          </ul>
+        </div>
+
+        <div className='habilidade-categoria'>
+          <h3 className='habilidade-titulo'>
+            <FontAwesomeIcon icon={faPaintBrush} /> Design
+          </h3>
+          <ul className='habilidade-lista'>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Adobe InDesign</li>
+            <li>Adobe XD</li>
+          </ul>
+        </div>
+
+        <div className='habilidade-categoria'>
+          <h3 className='habilidade-titulo'>
+            <FontAwesomeIcon icon={faUsers} /> Soft Skills
+          </h3>
+          <ul className='habilidade-lista'>
+            <li>Trabalho em Equipe</li>
+            <li>Atendimento ao Cliente</li>
+            <li>Comunicação Efetiva</li>
+          </ul>
+        </div>
+
+        <div className='habilidade-categoria'>
+          <h3 className='habilidade-titulo'>
+            <FontAwesomeIcon icon={faChartBar} /> Ferramentas
+          </h3>
+          <ul className='habilidade-lista'>
+            <li>Power BI</li>
+            <li>Office</li>
+          </ul>
+        </div>
+
+        <div className='habilidade-categoria'>
+          <h3 className='habilidade-titulo'>
+            <FontAwesomeIcon icon={faComments} /> Idiomas
+          </h3>
+          <ul className='habilidade-lista'>
+            <li>Português (Fluente)</li>
+            <li>Inglês (Básico)</li>
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
