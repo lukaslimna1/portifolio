@@ -100,8 +100,9 @@ function Curriculo() {
             <li>HTML | CSS</li>
             <li>JavaScript</li>
             <li>TypeScript</li>
-            <li>Node.js</li>
-            <li>Nest.js</li>
+            <li>Node.Js</li>
+            <li>Nest.Js</li>
+            <li>React.Js</li>
             <li>MySQL</li>
             <li>MongoDB</li>
             <li>GIT</li>
@@ -118,6 +119,7 @@ function Curriculo() {
             <li>Adobe Photoshop</li>
             <li>Adobe InDesign</li>
             <li>Adobe XD</li>
+            <li>Figma</li>
           </ul>
         </div>
 
@@ -148,7 +150,7 @@ function Curriculo() {
           </h3>
           <ul className='habilidade-lista'>
             <li>Português (Fluente)</li>
-            <li>Inglês (Básico)</li>
+            <li>Inglês (Técnico)</li>
           </ul>
         </div>
       </section>
