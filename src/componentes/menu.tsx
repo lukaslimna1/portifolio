@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../estilos/menu.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBriefcase } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faBriefcase, faFile } from "@fortawesome/free-solid-svg-icons";
 
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -58,6 +58,18 @@ const Menu: React.FC = () => {
               className='menu-link-icone'
             />{" "}
             Trabalhos
+          </Link>
+        </div>
+        <div className='menu-link'>
+          <Link
+            to='/curriculo'
+            className='menu-link-texto'
+          >
+            <FontAwesomeIcon
+              icon={faFile}
+              className='menu-link-icone'
+            />{" "}
+            Curriculo
           </Link>
         </div>
       </nav>

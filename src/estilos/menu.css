@@ -82,7 +82,7 @@
   right: -100%;
   width: 75vw;
   max-width: 255px;
-  height: 50vh;
+  height: 70vh;
   background-color: rgba(227, 244, 255, 0.8);
   backdrop-filter: blur(0.1em);
   border-radius: 1em 3em 1em 3em; /* Bordas arredondadas */
