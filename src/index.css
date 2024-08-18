@@ -66,3 +66,10 @@ html {
 .principal {
   font-family: "Facon", sans-serif;
 }
+
+h1 {
+  font-family: "Infra", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #4831d4;
+}

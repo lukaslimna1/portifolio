@@ -2,6 +2,7 @@
   display: flex;
   height: auto;
   flex-direction: column; /* Alinha os filhos verticalmente */
+  margin-top: 2em;
 }
 
 /*-------------------------------------------PRIMEIRA PARTE----------------------------------------------------------------*/
@@ -10,9 +11,10 @@
   display: flex;
   width: inherit;
   max-height: auto;
-  min-height: 90vh;
+  min-height: 95vh;
   background: linear-gradient(90deg, #4831d4 80%, #27e8b1 50%);
   overflow: hidden;
+  border-radius: 0em 3em 0.8em 3em; /* Bordas arredondadas */
 }
 
 /*Parte de cima do Topo*/
@@ -144,6 +146,7 @@
   flex-direction: row;
   min-height: auto;
   background-color: #4831d4;
+  border-radius: 0.8em 3em 0.8em 3em; /* Bordas arredondadas */
 }
 
 .home-formacao-texto,
@@ -181,7 +184,7 @@
 
 .home-link {
   display: flex;
-  min-height: auto;
+  min-height: 50vh;
   margin-top: 1em;
 }
 .home-link-esquerdo,
@@ -234,6 +237,7 @@
   cursor: pointer;
   overflow: hidden;
   transition: color 0.4s;
+  border-radius: 0.2em 2em 0.2em 2em; /* Bordas arredondadas */
 }
 
 /* Efeito Gradiente em Movimento */

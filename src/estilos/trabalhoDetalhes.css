@@ -1,0 +1,77 @@
+/* src/estilos/trabalhoDetalhes.css */
+.trabalho-detalhes-container {
+  padding: 20px;
+  text-align: center;
+  max-width: 1200px; /* Limita a largura máxima do container */
+  margin: auto; /* Centraliza o container horizontalmente */
+  background-color: #f8f9fa; /* Cor de fundo leve para consistência */
+}
+
+.trabalho-detalhes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Espaço abaixo do cabeçalho */
+}
+
+.trabalho-detalhes-logo {
+  width: 150px; /* Ajuste conforme necessário */
+}
+
+.trabalho-detalhe-titulo {
+  font-size: 3em;
+  color: #e3312d;
+}
+
+.trabalho-detalhes-imagem {
+  width: 100%; /* Ajusta a imagem para ocupar toda a largura do carrossel */
+  max-width: 700px; /* Limita a largura máxima das imagens do carrossel */
+  height: 500px;
+  border-radius: 10px; /* Bordas mais arredondadas */
+  margin-top: 2em; /* Espaço adicional abaixo da imagem */
+}
+
+/* Ajustes para o carrossel */
+.slick-slide {
+  display: flex; /* Garante que as imagens sejam centralizadas */
+  justify-content: center;
+  align-items: center;
+}
+
+.trabalho-detalhes-descricao {
+  text-align: justify;
+  font-size: 1.2em;
+  margin: 2em; /* Ajustado o espaçamento superior e inferior */
+  color: #333; /* Cor de texto mais suave */
+  line-height: 1.6; /* Melhor legibilidade */
+  margin-top: 4em; /* Espaço adicional abaixo da imagem */
+}
+
+.trabalho-detalhes-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #d40759, #e3312d);
+  color: #fff;
+  padding: 8px 15px; /* Ajustado o padding para um visual mais coeso */
+  border-radius: 0.3em 0.8em 0.3em 0.8em; /* Bordas arredondadas */
+  margin: 5px; /* Espaço entre as tags */
+  font-size: 0.9em; /* Tamanho de fonte ajustado */
+}
+
+.trabalho-detalhes-link {
+  display: inline-block;
+  margin-right: 0.5em; /* Espaço entre o ícone e o texto */
+  color: #4831d4; /* Cor do ícone */
+  font-size: 1.8em; /* Tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+}
+
+.trabalho-detalhes-link:hover {
+  color: #e3312d; /* Cor dos ícones ao passar o mouse */
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+.trabalho-detalhes-link svg {
+  margin-right: 5px; /* Espaço entre o ícone e o texto */
+  font-size: 1.2em; /* Tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+}

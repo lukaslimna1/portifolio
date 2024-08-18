@@ -13,7 +13,11 @@ function Rodape() {
   return (
     <div className='rodape'>
       <div className='rodape-logo'>
-        {/* Adicione aqui o componente ou imagem da logo */}
+        <img
+          src='/img/logo1.png'
+          alt='Logo Principal'
+          className='rodape-logo'
+        />{" "}
       </div>
       <div className='rodape-conteudo'>
         <div className='rodape-info'>
@@ -51,7 +55,7 @@ function Rodape() {
         </div>
         <div className='rodape-redes-sociais'>
           <a
-            href='https://www.linkedin.com/in/lucaslimna'
+            href='https://www.linkedin.com/in/lucaslimna/'
             target='_blank'
             rel='noopener noreferrer'
             className='rodape-link'
@@ -73,7 +77,7 @@ function Rodape() {
             />
           </a>
           <a
-            href='https://www.instagram.com/lucaslimna'
+            href='https://www.instagram.com/lukaslimna/'
             target='_blank'
             rel='noopener noreferrer'
             className='rodape-link'

@@ -1,0 +1,178 @@
+/* Estilo geral do container de trabalhos */
+.trabalhos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+/* Estilo para o cabeçalho com logo e botão de voltar */
+.trabalhos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.trabalhos-logo {
+  width: 150px;
+}
+
+.voltar-btn {
+  text-decoration: none;
+  margin: 2em 4em;
+  width: 10em;
+  height: 2.5em;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  background-color: #4831d4;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.2em 1em 0.2em 1em; /* Bordas arredondadas */
+}
+
+.voltar-btn:hover {
+  background: linear-gradient(90deg, #d40759, #e3312d);
+}
+
+/* Estilo para o título da página de trabalhos */
+.trabalho-h1 {
+  font-size: 3em;
+  font-weight: 900;
+  color: #e3312d;
+  margin-bottom: 0, 8em;
+}
+
+.principal-span {
+  font-size: 1.2em;
+  color: #d40759;
+  font-family: "Facon", sans-serif;
+}
+
+.trabalho-p {
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 2em;
+}
+
+/* Estilo para a lista de trabalhos */
+.trabalhos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Estilo para cada cartão de trabalho */
+.trabalho-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 1em 3em 1em 3em; /* Bordas arredondadas */
+}
+
+/* Efeito ao passar o mouse sobre o cartão */
+.trabalho-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para a imagem do trabalho */
+.trabalho-imagem {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border-radius: 0.2em 1em 0.2em 1em; /* Bordas arredondadas */
+}
+
+/* Estilo para o título do trabalho */
+.trabalho-titulo {
+  font-size: 1.6em;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #333;
+}
+
+/* Estilo para a tag do trabalho */
+.trabalho-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, #d40759, #e3312d);
+  color: #fff;
+  padding: 0.2em 1em;
+  margin: 0.2em;
+  margin-bottom: 1em;
+  font-size: 0.875em;
+  font-weight: 500;
+  border-radius: 0.3em 0.8em 0.3em 0.8em; /* Bordas arredondadas */
+}
+
+/* Estilo para a descrição do trabalho */
+.trabalho-descricao {
+  font-size: 1em;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Estilo para o link de detalhes */
+.trabalho-link {
+  display: inline-block;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Estilo para os ícones dos links */
+.trabalho-link-icon {
+  display: inline-block;
+  margin-right: 0.5em; /* Espaço entre o ícone e o texto */
+  color: #4831d4; /* Cor do ícone */
+  font-size: 1.8em; /* Tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+}
+.trabalho-link-icon:hover {
+  color: #e3312d; /* Cor dos ícones ao passar o mouse */
+  transform: scale(1.1); /* Efeito de aumento ao passar o mouse */
+}
+
+.filter-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.filter-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.3em 0.8em 0.3em 0.8em; /* Bordas arredondadas */
+  padding: 10px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+  background: linear-gradient(90deg, #d40759, #e3312d);
+}

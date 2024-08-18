@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../estilos/menu.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faBriefcase } from "@fortawesome/free-solid-svg-icons";
 
-function Menu() {
+const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
@@ -12,11 +12,17 @@ function Menu() {
   };
 
   return (
-    <header>
-      <div className='logo'>
+    <div className='menu-container'>
+      <div className='logo-container'>
         <img
-          src='logo.png'
-          alt='Logo'
+          src='/img/logo1.png'
+          alt='Logo Principal'
+          className='logo-principal'
+        />
+        <img
+          src='/img/logo.png'
+          alt='Logo Alternativa'
+          className='logo-alternativa'
         />
       </div>
       <button
@@ -35,17 +41,28 @@ function Menu() {
             to='/'
             className='menu-link-texto'
           >
-            {" "}
             <FontAwesomeIcon
               icon={faHome}
               className='menu-link-icone'
             />{" "}
-            HOME{" "}
+            Início
+          </Link>
+        </div>
+        <div className='menu-link'>
+          <Link
+            to='/trabalhos'
+            className='menu-link-texto'
+          >
+            <FontAwesomeIcon
+              icon={faBriefcase}
+              className='menu-link-icone'
+            />{" "}
+            Trabalhos
           </Link>
         </div>
       </nav>
-    </header>
+    </div>
   );
-}
+};
 
 export default Menu;

@@ -1,5 +1,6 @@
 /* Estilos principais do rodapé */
 .rodape {
+  width: auto;
   background-color: #4831d4; /* Cor de fundo vibrante */
   color: white; /* Cor do texto */
   padding: 2em; /* Espaçamento interno */
@@ -7,6 +8,7 @@
   align-items: center; /* Alinha verticalmente */
   justify-content: space-between; /* Distribui espaço entre os itens */
   flex-wrap: wrap; /* Permite quebra de linha para melhor responsividade */
+  border-radius: 0.8em 3em 0.8em 3em; /* Bordas arredondadas */
 }
 
 .rodape-logo {
@@ -15,6 +17,13 @@
   align-items: center;
   justify-content: center; /* Centraliza a logo */
   margin-right: 2em; /* Margem à direita */
+  max-height: 20vh;
+  max-width: 10vw;
+  transition: transform 1s ease-in-out; /* Transição suave para a rotação */
+}
+
+.rodape-logo:hover {
+  transform: rotate(90deg); /* Rotaciona o logo em 360 graus */
 }
 
 .rodape-conteudo {
@@ -70,7 +79,7 @@
 .rodape-icon {
   color: #fff; /* Cor padrão dos ícones */
   font-size: 2em; /* Tamanho dos ícones principais */
-  margin: 0 0.8em; /* Margem horizontal entre ícones */
+  margin: 0 0.02em; /* Margem horizontal entre ícones */
   transition: color 0.3s, transform 0.3s; /* Transição suave na cor e transformação */
 }
 
